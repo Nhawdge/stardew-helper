@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stardew Helper</title>
+    <link rel="stylesheet" href="stardew-helper.css" />
+</head>
+<body>
+    <h1>
+        Stardew helper
+    </h1>
+
+
+
+    <p>Current Day 
+        <span data-bind="currentDate"></span>
+    </p>
+    <h2> Upcoming birthdays (next 15 days)</h2>
+    <ul data-foreach="birthdays">
+
+    </ul>
+    
+    
+    <button data-click="nextDay">Next Day</button>
+    <script src="stardew-helper.js"></script>
+</body>
+</html>
