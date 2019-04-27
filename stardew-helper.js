@@ -60,7 +60,8 @@ function StarDate() {
 function Load() {
     // get data from localstorage
     BindButtons();
-    CurrentDate = new StarDate(1);
+
+    CurrentDate = new StarDate(+localStorage.getItem(schema.CurrentDate));
 
     var datespot = document.querySelector('[data-bind=currentDate]');
     datespot.innerHTML = CurrentDate;
@@ -103,8 +104,12 @@ function NextDay() {
     var datespot = document.querySelector('[data-bind=currentDate]');
     datespot.innerHTML = CurrentDate;
     LoadBirthdays();
+    Save();
 }
 
+function Save(){
+    localStorage.setItem(schema.CurrentDate, CurrentDate.value);
+}
 
 
 function main() {

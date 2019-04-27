@@ -1,0 +1,3 @@
+var schema = {
+    CurrentDate: "CurrentDate"
+}
